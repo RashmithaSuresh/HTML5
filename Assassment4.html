@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCCI</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            canvas {
+                border: 3px solid black;
+                border-radius: 30px;
+                padding: 20px;
+                background-color: #8BEAE5
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Board of Control for Cricket in India</h1>
+        <h3>T20 Cricket Match Statistics</h3>
+
+        <canvas id="bcci" width="500" height="400"></canvas>
+
+        <script>
+            var c = document.getElementById('bcci');
+            var cntex = c.getContext('2d');
+
+            cntex.font = '15px Arial';
+            cntex.lineWidth = 1.6;
+//code for graph
+
+            cntex.beginPath();
+            cntex.moveTo(140,370);
+            cntex.lineTo(140,0);
+            cntex.moveTo(240,370);
+            cntex.lineTo(240,0);
+            cntex.moveTo(340,370);
+            cntex.lineTo(340,0);
+            cntex.moveTo(440,370);
+            cntex.lineTo(440,0);
+            cntex.moveTo(40,315);
+            cntex.lineTo(500,315);
+            cntex.moveTo(40,265);
+            cntex.lineTo(500,265);
+            cntex.moveTo(40,215);
+            cntex.lineTo(500,215);
+            cntex.moveTo(40,165);
+            cntex.lineTo(500,165);
+            cntex.moveTo(40,115);
+            cntex.lineTo(500,115);
+            cntex.moveTo(40,65);
+            cntex.lineTo(500,65);
+            cntex.moveTo(40,15);
+            cntex.lineTo(500,15);
+            cntex.strokeStyle = 'black';
+            cntex.stroke();
+
+            cntex.beginPath();
+            cntex.moveTo(40,400);
+            cntex.lineTo(40,0);
+            cntex.moveTo(0,370);
+            cntex.lineTo(500,370);
+            cntex.strokeStyle = 'black';
+            cntex.stroke();
+
+            // code for chart
+            cntex.strokeText('240',0,70);
+            cntex.strokeText('200',0,120);
+            cntex.strokeText('160',0,170);
+            cntex.strokeText('120',0,220);
+            cntex.strokeText('80',8,270);
+            cntex.strokeText('40',8,320);
+
+            cntex.strokeText('0',16,395);
+            cntex.strokeText('5',136,395);
+            cntex.strokeText('10',231,395);
+            cntex.strokeText('15',332,395);
+            cntex.strokeText('20',431,395);
+
+           
+            cntex.beginPath();
+            cntex.font = 'bold 11px Arial';
+            cntex.fillStyle = '#B82657';
+			cntex.fillText('RUNS ^',0,10);
+			cntex.fillText('OVERS >',452,400);
+
+     
+            cntex.beginPath();
+            cntex.strokeStyle = 'red';
+            cntex.arc(140,315,2,0,2*Math.PI);
+            cntex.arc(240,275,2,0,2*Math.PI);
+            cntex.arc(340,190,2,0,2*Math.PI);
+            cntex.stroke();
+        </script>
+
+    </body>
+</html>
